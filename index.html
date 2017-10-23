@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>React</title>
+		<script src="https://unpkg.com/react@15/dist/react.js"></script>
+		<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+	</head>
+	<!--<body>
+<p>Probando react</p>
+<div id="root">
+Si se ve esto, esta wea no funciona
+</div>
+<script src="js/app.js"></script>
+</body>-->
+	<body>
+
+		<!-- ahora tendremos 2 contenedores -->
+		<div id="cabecera-1">
+
+		</div>
+		<div id="cabecera-2">
+
+		</div>
+
+		<script>
+			const div = React.DOM.div
+			const h2 = React.DOM.h2
+
+			function Cabecera(props) {
+				const titulo = 'Hola ' + props.saludo;
+
+				const elemento = div(null,
+									 h2(null, titulo),
+									)
+
+									 return elemento
+									 }
+
+				ReactDOM.render(
+					 Cabecera({ saludo: 'Mundo' }),
+					  document.getElementById('cabecera-1')
+					  );
+
+				ReactDOM.render(
+					Cabecera({ saludo: 'Amigx' }),
+					document.getElementById('cabecera-2')
+				);
+		</script>
+	</body>
+</html>
